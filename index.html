@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form | Arsl</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="wrapper">
+            <div id="input">
+                <form oninput="ageo.value=age.value" >
+                    <div class="input-row">
+                        <div class="left">
+                            <label for="fname">Type Your First Name: </label>
+                        </div>
+                        <div class="right">
+                            <input type="text" name="fname" id="fname" placeholder="Type Your First Name" required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="left">
+                            <label for="lname">Type Your Last Name: </label>
+                        </div>
+                        <div class="right">
+                            <input type="text" name="lname" id="lname" placeholder="Type Your Last Name" required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="left">
+                            <label for="fathername">Type Your Father Name: </label>
+                        </div>
+                        <div class="right">
+                            <input type="text" name="fathername" id="fathername" placeholder="Type Your Father Name"
+                                required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="left">
+                            <label for="age">Select Your Age: </label>
+                        </div>
+                        <div class="right">
+                            <input type="range" name="age" id="age" min="10" max="60" value="18"> =
+                            <output name="ageo">(Age)</output>
+                            <span class="year">Year</span>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="left">
+                            <label for="phone">Type Your Phone Number: </label>
+                        </div>
+                        <div class="right">
+                            <input type="text" name="phone" id="phone" placeholder="Type Your Phone Number" required
+                                maxlength="11">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="left">
+                            <label for="email">Type Your Email Address: </label>
+                        </div>
+                        <div class="right">
+                            <input type="email" name="email" id="email" placeholder="Type Your Email" required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="left">
+                            <label for="image">Upload Your Picture: </label>
+                        </div>
+                        <div class="right">
+                            <input type="file" name="image" id="image" >
+                        </div>
+                    </div>
+                    <input type="button" value="Submit Form" class="button" id="formd" onclick="mydata()">
+                    <input type="button" value="Show Form" class="button" id="forms" onclick="mydatas()">
+                    <input type="reset" value="Clear All Data" class="button" onclick="mydatac()">
+
+                </form>
+            </div>
+
+
+
+            <div id="output">
+                <div id="oBody" style="display: none;">
+                    <h1 id="tableh1" >Please Fill Form!</h1>
+                    <!-- <img src="exp.jpg" alt="Your Pic" id="p-img"> -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Father Name</th>
+                                <th>Age</th>
+                                <th>Phone Number</th>
+                                <th>Email Address</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody"></tbody>
+
+                    </table>
+                    <button id="hideB" onclick="hideB()">Hide Table <span class="a"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var fname = document.getElementById('fname');
+        var lname = document.getElementById('lname');
+        var fathername = document.getElementById('fathername');
+        var age = document.getElementById('age');
+        var phone = document.getElementById('phone');
+        var email = document.getElementById('email');
+        var h1 = document.getElementById('tableh1');
+        var obody = document.getElementById('oBody');
+        var image = document.getElementById('image');
+
+        var table = document.getElementById('tbody');
+
+
+
+        function mydata() {
+            obody.style.display = 'block';
+
+            if (age <= 18) {
+                alert('Please Complete the Form');
+                return false;
+            }
+
+            table.innerHTML = table.innerHTML + '<tr>' + '<td>' + fname.value + '</td>' + '<td>' + lname.value + '</td>' + '<td>' + fathername.value + '</td>' + '<td>' + age.value + '</td>' + '<td>' + phone.value + '</td>' + '<td>' + email.value + '</td>' + '</tr>';
+            tableh1.innerHTML = 'Hello ' + fname.value + ' ' + lname.value + ' s/o ' + fathername.value;
+        }
+
+        function mydatas() {
+            obody.style.display = 'block';
+
+        }
+        function mydatac() {
+            table.innerHTML = ' ';
+            h1.innerHTML = 'Please Fill Form!';
+        }
+
+
+        function hideB() {
+            obody.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

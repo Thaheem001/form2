@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+}
+
+#wrapper {
+    width: 95%;
+    margin: 15px auto;
+}
+
+#input input {
+    width: 100%;
+    display: inline-block;
+}
+
+.button {
+    width: 30% !important;
+    height: 50px !important;
+    margin: 10px auto;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto 40px;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-collapse: collapse;
+    border: 2px solid white;
+}
+
+table tr {
+    height: 45px;
+}
+
+table thead th {
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    height: 40px;
+    font-weight: 300;
+}
+
+table tbody td {
+    padding-left: 10px;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: white;
+}
+
+#p-img {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#hideB {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    padding-right: 20px;
+    position: relative;
+    margin-left: 20px;
+    background-color: orange;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+span.a {
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    right: 10px;
+    border-bottom: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+}
+
+.input-row .left {
+    width: 40%;
+    height: 30px;
+    margin: 10px;
+    float: left;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.input-row .right {
+    width: 50%;
+    height: 30px;
+    float: right;
+    margin: 10px;
+}
+
+input[type=text], input[type=email] {
+    height: 30px;
+    padding-left: 10px;
+}
+
+#age {
+    width: 65% !important;
+}
+
+input[type=reset] {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#formd {
+    background-color: green !important;
+    border: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#forms {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    background-color: orange;
+    border: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 480px) {
+    .input-row .left {
+        width: 80%;
+    }
+    .input-row .right {
+        width: 95%;
+    }
+    .button {
+        width: 100% !important;
+        margin: 10px 0px !important;
+    }
+}
